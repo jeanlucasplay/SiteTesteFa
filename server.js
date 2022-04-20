@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Importando Módulo Router
-const admin = require('./routes/admin');
+const pages = require('./routes/routes.js');
 
 // Importando Módulo Handlebars
 const handlebars = require('express-handlebars');
@@ -21,7 +21,7 @@ const path = require('path');
 
 
 // Configurando Rotas
-app.use("/admin", admin)
+app.use("/pages", pages)
 
 // Configurando Porta Server
 app.listen(8080, () => {
